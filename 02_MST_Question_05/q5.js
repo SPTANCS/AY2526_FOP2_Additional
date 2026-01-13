@@ -44,10 +44,14 @@ function getAttendanceBelow(givenClass, givenPercent) {
   const result = new Map();
 
 //  for (const tempClass of givenClass) {
-  for (let i = 0; i < givenClass.length; i++) {
-    const tempClass = givenClass[i];
-    const students  = tempClass.students;
+  for (let i = 0; i < givenClass.length; i++) { // iterate through each class
+    const tempClass = givenClass[i];            // get the current class
+    const students  = tempClass.students;       // get the students of the current class
+    
+    // filter students with attendance below givenPercent
     const lowAttendance = students.filter((student) => student.attendance < givenPercent);
+
+    // add to result map with className as key and lowAttendance array as value
     result.set(tempClass.className, lowAttendance);
   }
   return result;
@@ -59,16 +63,23 @@ function lowestClassAverage(givenClass) {
   let lowest = null;
 
   //for (const tempClass of givenClass) {
-  for (let i = 0; i < givenClass.length; i++) {
-    const tempClass = givenClass[i];
-    const students  = tempClass.students;
+  for (let i = 0; i < givenClass.length; i++) { // iterate through each class
+    const tempClass = givenClass[i];          // get the current class  
+    const students  = tempClass.students;     // get the students of the current class
+    
+    // calculate the total attendance of the class
+    // Use reduce to accumulate attendance: 'sum' starts at 0 and we add each student's attendance
+    // The final 'total' is the sum of attendance for all students in the class
     const total = students.reduce((sum, student) => sum + student.attendance, 0);
+
+    // calculate the average attendance of the class
     const avg = total / students.length;
 
+    // check if this class has the lowest average attendance
     if (lowest == null || avg < lowest.averageAttendance) {
-      lowest = {
-        className: tempClass.className,
-        averageAttendance: avg.toFixed(2),
+      lowest = {  // update lowest with current class details
+        className: tempClass.className, 
+        averageAttendance: avg.toFixed(2), // format to 2 decimal places
       };
     }
   }
@@ -78,11 +89,11 @@ function lowestClassAverage(givenClass) {
 // Complete the Function 3: displayMapClasses ---------------------------
 function displayMapClasses(mapClasses) {
   /* TODO: Add code here */
-  for (const [studentClasses, students] of mapClasses) {
+  for (const [studentClasses, students] of mapClasses) { // iterate through each entry in the map
     console.log(`Student Class ${studentClasses}`);
 
-    for (let i = 0; i < students.length; i++) {
-      const student = students[i];
+    for (let i = 0; i < students.length; i++) {     // iterate through each student in the class  
+      const student = students[i];                  // get the current student
       console.log(`Attendance:${student.attendance}\t Student: ${student.id} ${student.name}\t`);
     }
 
