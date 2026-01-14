@@ -34,12 +34,12 @@ function getNumberInArrayDivisibleBy(givenArray, num) {
 }
 
 
-console.log('\nCalling getNumberInArrayLessThan with array numberArr and 50 as input to the function');
-const outputArray1 = getNumberInArrayLessThan(numberArr, 50);
-console.log('Result is :');
-console.table(outputArray1);
+// console.log('\nCalling getNumberInArrayLessThan with array numberArr and 50 as input to the function');
+// const outputArray1 = getNumberInArrayLessThan(numberArr, 50);
+// console.log('Result is :');
+// console.table(outputArray1);
 
-console.log('\nCalling getNumberInArrayDivisibleBy with array numberArr and 3 as input to the function');
-const outputArray2 = getNumberInArrayDivisibleBy(numberArr, 3);
-console.log('Result is :');
-console.table(outputArray2);
+// console.log('\nCalling getNumberInArrayDivisibleBy with array numberArr and 3 as input to the function');
+// const outputArray2 = getNumberInArrayDivisibleBy(numberArr, 3);
+// console.log('Result is :');
+// console.table(outputArray2);
