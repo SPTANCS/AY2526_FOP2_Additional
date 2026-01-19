@@ -88,6 +88,10 @@ function lowestClassAverage(givenClass) {
 
 // Complete the Function 3: displayMapClasses ---------------------------
 function displayMapClasses(mapClasses) {
+
+  // Map documentation
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
   /* TODO: Add code here */
   for (const [studentClasses, students] of mapClasses) { // iterate through each entry in the map
     console.log(`Student Class ${studentClasses}`);
