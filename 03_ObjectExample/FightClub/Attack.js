@@ -1,14 +1,19 @@
+// Attack class represents a combat move that a player can use
 class Attack {
+    // Constructor initializes an attack with name, damage amount, and hit probability
     constructor(name, damage, hitPercentage) {
-        this.name = name;
-        this.damage = damage;
-        this.hitPercentage = hitPercentage; // 0–100
+        this.name = name;                    // Name of the attack (e.g., "Sword Slash", "Fireball")
+        this.damage = damage;                // Amount of damage this attack deals
+        this.hitPercentage = hitPercentage;  // Probability of hitting (0–100)
     }
 
+    // Determine if the attack hits based on its hit percentage
+    // Returns true if the attack hits, false if it misses
     attemptHit() {
-        const roll = Math.random() * 100;
-        return roll <= this.hitPercentage;
+        const roll = Math.random() * 100;   // Generate a random number between 0.0 and 99.999...
+        return roll <= this.hitPercentage;  // Hit succeeds if roll is within the hit percentage
     }
 }
 
+// Export the Attack class for use in other modules
 module.exports = Attack;

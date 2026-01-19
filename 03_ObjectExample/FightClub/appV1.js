@@ -14,7 +14,7 @@ const warrior = new Player("Arthas", 100, "Warrior", [swordSlash, shieldBash]);
 const wizard  = new Player("Merlin",  80, "Wizard" , [fireball, lightning]);
 
 // Simulate battle
-console.clear();
+console.clear(); 
 console.log("⚔️  The battle begins!");
 console.log("-------------------------");
 
