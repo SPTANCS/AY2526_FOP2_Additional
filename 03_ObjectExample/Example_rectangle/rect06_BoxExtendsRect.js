@@ -1,5 +1,5 @@
-const Box = require("./Box");
-const Rectangle = require("./Rectangle");
+const Box = require("./classes/Box");
+const Rectangle = require("./classes/Rectangle");
 
 console.clear();
 console.log("Box Usage Example");

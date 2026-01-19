@@ -1,4 +1,4 @@
-const Rectangle = require("./Rectangle");
+const Rectangle = require("./classes/Rectangle");
 
 console.clear();
 console.log("Rectangle Demo (Using Class Instead of Object Literals)");

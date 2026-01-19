@@ -1,7 +1,7 @@
 // given rect03_withFunction.js and rect04_withClass.js
 // rect03_withFunction.js seem to work well, why then should be consider Classes?
 
-const Rectangle = require("./Rectangle");
+const Rectangle = require("./classes/Rectangle");
 
 function createRectangle(width, height, color) {
   return {

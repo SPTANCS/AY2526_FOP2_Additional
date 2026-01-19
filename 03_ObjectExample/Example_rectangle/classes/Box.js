@@ -13,6 +13,12 @@ class Box extends Rectangle {
   calculateVolume() {
     return this.width * this.height * this.depth;
   }
+
+  // Compare volume with another Box
+  // override isBigger method to compare volumes instead of areas
+  isBigger(otherBox) {
+    return this.calculateVolume() > otherBox.calculateVolume();
+  }  
 }
 
 module.exports = Box;
