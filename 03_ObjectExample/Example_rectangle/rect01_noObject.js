@@ -37,9 +37,9 @@ if (isBigger(rect1Area, rect2Area)) {
 console.log("----------------------------------");
 
 // Multiple rectangles using parallel arrays
-const widths = [4, 7, 5];
+const widths  = [4, 7, 5];
 const heights = [6, 3, 5];
-const colors = ["Green", "Yellow", "Purple"];
+const colors  = ["Green", "Yellow", "Purple"];
 
 // rectangles dietails
 for (let i = 0; i < widths.length; i++) {
