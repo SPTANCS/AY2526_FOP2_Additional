@@ -36,7 +36,7 @@ if (isBigger(rect1Area, rect2Area)) {
 
 console.log("----------------------------------");
 
-// Multiple rectangles using parallel arrays
+//Multiple rectangles using parallel arrays
 const widths  = [4, 7, 5];
 const heights = [6, 3, 5];
 const colors  = ["Green", "Yellow", "Purple"];
